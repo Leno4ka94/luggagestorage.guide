@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    {% seo %}
+    {% include head-custom.html %}
+    <style>
+        .image-clip {
+            width: 250px;
+            height: 175px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header class="pt-5 pb-3">
+        <h1 style="text-align:center; color: #353535">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+    </header>
+    <main class="flex-shrink-0 pb-4">
+        <div class="container">
+            {{content}}
+        </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">
+                <a class="p-2 text-dark" style="text-decoration: none;" href="/">Home</a>
+                <a class="p-2 text-dark" style="text-decoration: none;" href="/contact">Contact</a>
+                <a class="p-2 text-dark" style="text-decoration: none;" href="/terms">Terms</a>
+                <a class="p-2 text-dark" style="text-decoration: none;" href="/privacy">Privacy</a>
+            </span>
+        </div>
+    </footer>
+</body>
+
+</html>
